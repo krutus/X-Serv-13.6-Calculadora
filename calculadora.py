@@ -1,5 +1,4 @@
 #!/usr/bin/python
-
 import sys
 
 
@@ -16,10 +15,7 @@ def mult(Val1, Val2):
 
 
 def div(Val1, Val2):
-    if int(Val2) == 0:
-        print "NO SE PUEDE DIVIDIR ENTRE 0"
-    else:
-        print float(Val1) / int(Val2)
+    print float(Val1) / int(Val2)
 
 if __name__ == "__main__":
     try:
@@ -35,3 +31,5 @@ if __name__ == "__main__":
         print("Uno de los valores no es un numero")
     except IndexError:
         print("Falta al menos uno de los valores")
+    except ZeroDivisionError:
+        print("No se puede dividir entre 0")
